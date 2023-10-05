@@ -1,0 +1,1 @@
+export const LOGO_PATH = 'assets/imgs/logo.svg';

@@ -34,6 +34,9 @@
             "styles": [
               "src/theme/variables.scss",
               "src/theme/font.scss",
+              "src/theme/coloring.scss",
+              "src/theme/positioning.scss",
+              "src/theme/typography.scss",
               "src/global.scss"
             ],
             "scripts": []
@@ -118,6 +121,9 @@
             "styles": [
               "src/theme/variables.scss",
               "src/theme/font.scss",
+              "src/theme/coloring.scss",
+              "src/theme/positioning.scss",
+              "src/theme/typography.scss",
               "src/global.scss"
             ],
             "scripts": []
