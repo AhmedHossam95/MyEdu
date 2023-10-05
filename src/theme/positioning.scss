@@ -7,3 +7,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.flex-col-center-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

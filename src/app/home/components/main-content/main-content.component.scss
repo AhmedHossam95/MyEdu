@@ -1,0 +1,15 @@
+.main-content {
+    padding-block: 32px;
+    gap: 24px;
+
+    .main-paragraph {
+        text-shadow: 2px 2px 0px var(--ion-color-primary);
+        line-height: 48px;
+        padding-inline: 3rem;
+        text-wrap: balance;
+    }
+
+    .main-description {
+        line-height: 30px;
+    }
+}
