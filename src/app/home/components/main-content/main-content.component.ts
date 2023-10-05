@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MAIN_CONTENT_IMG_PATH } from 'src/app/core/constants/imgs-paths';
 
 @Component({
   selector: 'app-main-content',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-content.component.scss'],
 })
 export class MainContentComponent  implements OnInit {
-
+  placeholderImgPath!:string;
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getPlaceholderImgPath();
+  }
 
+  getPlaceholderImgPath():void {
+    this.placeholderImgPath = MAIN_CONTENT_IMG_PATH;
+  }
 }
