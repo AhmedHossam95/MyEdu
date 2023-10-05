@@ -1,22 +1,26 @@
-.main-content {
-    margin-block: 32px 80px;
-    gap: 24px;
+article {
+    height: 700px;
 
-    .main-paragraph {
-        text-shadow: 2px 2px 0px var(--ion-color-primary);
-        line-height: 48px;
-        padding-inline: 3rem;
-        text-wrap: balance;
+    .main-content {
+        padding-block: 32px 80px;
+        gap: 24px;
+
+        .main-paragraph {
+            text-shadow: 2px 2px 0px var(--ion-color-primary);
+            line-height: 48px;
+            padding-inline: 3rem;
+            text-wrap: balance;
+        }
+
+        .main-description {
+            line-height: 30px;
+        }
+
+
     }
 
-    .main-description {
-        line-height: 30px;
+    .placeholder-img {
+        height: 200px;
+        object-fit: fill;
     }
-
-
-}
-
-.placeholder-img {
-    height: 200px;
-    object-fit: fill;
 }
