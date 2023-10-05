@@ -8,6 +8,7 @@ import { MAIN_CONTENT_IMG_PATH } from 'src/app/core/constants/imgs-paths';
 })
 export class MainContentComponent  implements OnInit {
   placeholderImgPath!:string;
+  buttonLabel= 'subscribe now';
   constructor() { }
 
   ngOnInit() {
