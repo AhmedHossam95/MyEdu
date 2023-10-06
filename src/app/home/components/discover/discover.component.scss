@@ -1,0 +1,22 @@
+article {
+    padding-block: 56px;
+
+    .content-wrapper {
+        gap: 24px;
+        margin-block: 16px 80px;
+
+        .heading {
+            padding-inline: 10px;
+            line-height: 48px;
+        }
+
+        .desc {
+            line-height: 36px;
+            font-size: 24px;
+        }
+    }
+
+    .steps-wrapper {
+        gap: 48px;
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { STEPS, Step } from '../../models/steps.model';
 
 @Component({
   selector: 'app-discover',
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discover.component.scss'],
 })
 export class DiscoverComponent  implements OnInit {
+  steps: Step[] = [];
+  buttonLabel = 'subscribe now';
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getSteps();
+  }
+
+  getSteps():void {
+    this.steps = STEPS;
+  }
+
 
 }
