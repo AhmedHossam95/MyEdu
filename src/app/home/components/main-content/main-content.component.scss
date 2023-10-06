@@ -1,14 +1,13 @@
 article {
-    height: 700px;
+    padding-block: 32px 56px;
 
     .content-wrapper {
-        padding-block: 32px 80px;
+        margin-bottom: 80px;
         gap: 24px;
 
         .heading {
             text-shadow: 2px 2px 0px var(--ion-color-primary);
             line-height: 48px;
-            padding-inline: 3rem;
             text-wrap: balance;
         }
 

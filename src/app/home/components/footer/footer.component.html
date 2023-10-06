@@ -1,3 +1,6 @@
-<p>
-  footer works!
-</p>
+<article>
+  <ion-img [src]="logoPath" class="logo"></ion-img>
+  <section class="d-flex flex-col links">
+    <a *ngFor="let link of links" class="font-lg link black-txt font-bold"> {{link | titlecase}} </a>
+  </section>
+</article>
