@@ -1,3 +1,12 @@
 <article class="d-flex flex-col">
   <app-nav-links></app-nav-links>
+  <app-subscribtion-form></app-subscribtion-form>
+  <section>
+    <hr class="divider" />
+    <nav class="footer-links-wrapper d-flex flex-col">
+      <a href="https://www.google.com" *ngFor="let link of footerLinks" class="footer-link black-txt font-md">{{link |
+        titlecase}}</a>
+    </nav>
+    <p class="ion-no-margin font-md">© 2023 Relume. All rights reserved.</p>
+  </section>
 </article>

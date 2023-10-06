@@ -15,5 +15,6 @@
     &::part(native) {
         box-shadow: 4px 4px 0px -1px var(--ion-color-primary);
         border: 1px solid var(--ion-color-primary);
+        padding: 10px 24px;
     }
 }

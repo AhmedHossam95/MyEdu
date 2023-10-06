@@ -2,5 +2,13 @@ article {
     padding: 48px 20px;
     gap: 48px;
 
+    .footer-links-wrapper {
+        gap: 16px;
+        text-decoration: underline;
+        margin-bottom: 32px;
+    }
 
+    .divider {
+        margin-bottom: 24px;
+    }
 }

@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { StepComponent } from './components/step/step.component';
 import { NavLinksComponent } from './components/nav-links/nav-links.component';
+import { SubscribtionFormComponent } from './components/subscribtion-form/subscribtion-form.component';
 
 
 @NgModule({
@@ -19,8 +20,8 @@ import { NavLinksComponent } from './components/nav-links/nav-links.component';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    CoreModule
+    CoreModule,
   ],
-  declarations: [HomePage, MainContentComponent, FooterComponent, DiscoverComponent, StepComponent, NavLinksComponent]
+  declarations: [HomePage, MainContentComponent, FooterComponent, DiscoverComponent, StepComponent, NavLinksComponent, SubscribtionFormComponent]
 })
 export class HomePageModule { }

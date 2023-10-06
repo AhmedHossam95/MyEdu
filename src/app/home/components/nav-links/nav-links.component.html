@@ -1,8 +1,6 @@
-<nav>
+<section>
   <ion-img [src]="logoPath" class="logo"></ion-img>
-  <ul class="d-flex flex-col links">
-    <li *ngFor="let link of links">
-      <a class="font-lg link black-txt font-bold"> {{link | titlecase}} </a>
-    </li>
-  </ul>
-</nav>
+  <nav class="d-flex flex-col links">
+    <a *ngFor="let link of links" class="font-lg link black-txt font-bold"> {{link | titlecase}} </a>
+  </nav>
+</section>

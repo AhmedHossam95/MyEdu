@@ -1,0 +1,12 @@
+<section class="d-flex flex-col">
+  <h3 class="font-semi-bold font-lg ion-no-margin">Subscribe</h3>
+  <form (ngSubmit)="subscribe()" #form="ngForm">
+    <ion-input type="email" placeholder="Enter your email" mode="md" fill="outline"
+      class="font-lg email-input ion-margin-bottom"></ion-input>
+    <ion-button expand="block" fill="outline" class="submit-btn ion-no-margin font-lg" mode="ios">
+      Subscribe
+    </ion-button>
+  </form>
+  <p class="ion-no-margin font-sm">By subscribing you agree to with our <a class="privacy-policy">Privacy
+      Policy</a></p>
+</section>
