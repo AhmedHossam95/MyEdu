@@ -1,0 +1,16 @@
+   .logo {
+       margin-bottom: 32px;
+       width: 63px;
+       height: 27px;
+   }
+
+   .links {
+       gap: 16px;
+       list-style: none;
+       margin: 0;
+       padding: 0;
+
+       .link {
+           text-decoration: none;
+       }
+   }

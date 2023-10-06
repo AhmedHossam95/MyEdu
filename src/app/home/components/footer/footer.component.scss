@@ -1,17 +1,6 @@
 article {
     padding: 48px 20px;
+    gap: 48px;
 
-    .logo {
-        margin-bottom: 32px;
-        width: 63px;
-        height: 27px;
-    }
 
-    .links {
-        gap: 16px;
-
-        .link {
-            text-decoration: none;
-        }
-    }
 }

@@ -10,6 +10,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { FooterComponent } from './components/footer/footer.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { StepComponent } from './components/step/step.component';
+import { NavLinksComponent } from './components/nav-links/nav-links.component';
 
 
 @NgModule({
@@ -20,6 +21,6 @@ import { StepComponent } from './components/step/step.component';
     HomePageRoutingModule,
     CoreModule
   ],
-  declarations: [HomePage, MainContentComponent,FooterComponent,DiscoverComponent,StepComponent]
+  declarations: [HomePage, MainContentComponent, FooterComponent, DiscoverComponent, StepComponent, NavLinksComponent]
 })
-export class HomePageModule {}
+export class HomePageModule { }
