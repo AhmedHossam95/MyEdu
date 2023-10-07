@@ -11,7 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DiscoverComponent } from './components/discover/discover.component';
 import { StepComponent } from './components/step/step.component';
 import { NavLinksComponent } from './components/nav-links/nav-links.component';
-import { SubscribtionFormComponent } from './components/subscribtion-form/subscribtion-form.component';
+import { EmailSubscriptionFormComponent } from './components/email-subscription-form/email-subscription-form.component';
 
 
 @NgModule({
@@ -22,6 +22,6 @@ import { SubscribtionFormComponent } from './components/subscribtion-form/subscr
     HomePageRoutingModule,
     CoreModule,
   ],
-  declarations: [HomePage, MainContentComponent, FooterComponent, DiscoverComponent, StepComponent, NavLinksComponent, SubscribtionFormComponent]
+  declarations: [HomePage, MainContentComponent, FooterComponent, DiscoverComponent, StepComponent, NavLinksComponent, EmailSubscriptionFormComponent]
 })
 export class HomePageModule { }

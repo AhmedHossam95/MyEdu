@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-subscribtion-form',
-  templateUrl: './subscribtion-form.component.html',
-  styleUrls: ['./subscribtion-form.component.scss'],
+  selector: 'app-subscription-form',
+  templateUrl: './email-subscription-form.component.html',
+  styleUrls: ['./email-subscription-form.component.scss'],
 })
-export class SubscribtionFormComponent implements OnInit {
+export class EmailSubscriptionFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }
