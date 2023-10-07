@@ -1,4 +1,4 @@
-<article class="bg-yellow ion-padding-horizontal ion-text-center">
+<article class="bg-yellow ion-padding-horizontal ion-text-center flex-col-center-all">
   <p class="font-lg ion-no-margin font-semi-bold">discover</p>
   <div class="content-wrapper flex-col-center-all txt-wrap ion-text-center">
     <h1 class="heading ion-no-margin font-xxxl font-bold">
@@ -12,7 +12,9 @@
   </div>
   <div class="steps-wrapper flex-col-center-all">
     <app-step *ngFor="let step of steps" [step]="step"></app-step>
-    <app-custom-btn [label]="buttonLabel" [width]="193"></app-custom-btn>
   </div>
+  <ion-button expand="block" class="custom-btn font-xl ion-no-margin font-bold" mode="ios">
+    {{'subscribe now' | titlecase}}
+  </ion-button>
 
 </article>

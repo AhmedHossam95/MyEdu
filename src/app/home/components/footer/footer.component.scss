@@ -12,3 +12,18 @@ article {
         margin-bottom: 24px;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    article {
+        padding: 80px 64px;
+
+        .footer-links-wrapper {
+            flex-direction: row;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

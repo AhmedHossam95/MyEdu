@@ -6,9 +6,8 @@ import { STEPS, Step } from '../../models/steps.model';
   templateUrl: './discover.component.html',
   styleUrls: ['./discover.component.scss'],
 })
-export class DiscoverComponent  implements OnInit {
+export class DiscoverComponent implements OnInit {
   steps: Step[] = [];
-  buttonLabel = 'subscribe now';
 
   constructor() { }
 
@@ -16,7 +15,7 @@ export class DiscoverComponent  implements OnInit {
     this.getSteps();
   }
 
-  getSteps():void {
+  getSteps(): void {
     this.steps = STEPS;
   }
 

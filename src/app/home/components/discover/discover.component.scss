@@ -6,16 +6,44 @@ article {
         margin-block: 16px 80px;
 
         .heading {
-            line-height: 48px;
+            line-height: 120%;
         }
 
         .desc {
-            line-height: 36px;
+            line-height: 150%;
             font-size: 24px;
         }
     }
 
     .steps-wrapper {
         gap: 48px;
+
+        * {
+            flex: 1;
+        }
+
+    }
+
+    .custom-btn {
+        margin-top: 48px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    article {
+        padding: 112px 64px;
+
+        .content-wrapper {
+            width: 804px;
+        }
+
+        .heading {
+            font-size: 48px;
+        }
+
+        .steps-wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+        }
     }
 }

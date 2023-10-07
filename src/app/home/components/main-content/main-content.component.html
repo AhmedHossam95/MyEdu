@@ -1,4 +1,4 @@
-<article class="bg-pirple ion-padding-horizontal">
+<article class="bg-pirple ion-padding-horizontal flex-col-center-all">
   <div class="content-wrapper white-txt txt-wrap flex-col-center-all ion-text-center">
     <h1 class="heading ion-no-margin font-xxxl font-extra-bold">
       Discover the magic of our surprise box
@@ -6,8 +6,9 @@
     <h2 class="desc font-xl ion-no-margin">
       Unleash your child's curiosity with our educational subscription box filled with fun and learning.
     </h2>
-    <app-custom-btn [label]="buttonLabel" [width]="193"></app-custom-btn>
-
+    <ion-button expand="block" class="custom-btn font-xl ion-no-margin font-bold" mode="ios">
+      {{'subscribe now' | titlecase}}
+    </ion-button>
   </div>
 
   <ion-img [src]="placeholderImgPath" class="placeholder-img"></ion-img>

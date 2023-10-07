@@ -42,3 +42,15 @@
 .font-semi-bold {
     font-weight: 600;
 }
+
+
+@media screen and (min-width: 1200px) {
+    .font-xxxl {
+        font-size: 56px;
+    }
+
+
+    .font-xl {
+        font-size: 24px;
+    }
+}

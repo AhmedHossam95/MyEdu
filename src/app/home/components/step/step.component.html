@@ -1,5 +1,10 @@
 <section class="step txt-balance flex-col-center-all ion-text-center" *ngIf="step">
   <ion-img [src]="step.icon" class="step-icon"></ion-img>
-  <h3 class="font-xxl ion-no-margin font-bold txt-wrap">{{ step.title }}</h3>
-  <h4 class="font-lg ion-no-margin">{{ step.description }}</h4>
+  <h3 class="line-h-130 font-xxl ion-no-margin font-bold txt-wrap ion-hide-xl-up">{{ step.mobileTitle }}</h3>
+  <div class="ion-hide-xl-down">
+    <h3 class="line-h-130 font-xxl ion-no-margin font-bold txt-wrap">{{ step.desktopTitle }}</h3>
+    <h3 class="sub-title line-h-130 ion-no-margin font-bold txt-wrap">{{ step.desktopSubTitle }}</h3>
+  </div>
+
+  <h4 class="desc font-lg ion-no-margin">{{ step.description }}</h4>
 </section>
