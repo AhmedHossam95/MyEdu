@@ -32,6 +32,7 @@ article {
 @media screen and (min-width: 1200px) {
     article {
         padding: 112px 64px;
+        background: url(../../../../assets/imgs/discover-bg.png) center/cover no-repeat, var(--ion-color-tertiary);
 
         .content-wrapper {
             width: 804px;
