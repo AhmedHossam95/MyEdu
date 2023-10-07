@@ -7,7 +7,9 @@
   </div>
 
   <section>
-    <hr class="divider" />
+    <div class="divider-wrapper">
+      <app-divider bgClassName="bg-black"></app-divider>
+    </div>
     <div class="footer">
       <nav class="footer-links-wrapper d-flex flex-col">
         <a href="https://www.google.com" *ngFor="let link of footerLinks" class="footer-link black-txt font-md">{{link |

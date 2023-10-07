@@ -1,0 +1,25 @@
+    .form-control {
+        gap: 6px;
+
+        .label {
+            line-height: 143%;
+            color: #344054;
+        }
+
+        .input {
+            border-radius: 8px;
+            padding: 10px 14px;
+            border: 1px solid #D0D5DD;
+            line-height: 150%;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            min-height: unset;
+            height: 44px;
+            color: #667085;
+            opacity: 0.5;
+        }
+
+        .input.has-value {
+            opacity: 1;
+        }
+
+    }

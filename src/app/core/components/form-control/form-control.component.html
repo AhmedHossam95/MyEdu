@@ -1,0 +1,15 @@
+<div class="d-flex flex-col form-control">
+  <label [for]="controlName" class="font-md label">{{label | titlecase}}</label>
+  <ng-container *ngIf="type!=='select';else isSelect">
+    <ion-input fill="outline" [name]="controlName" [formControl]="control" mode="md" [type]="type"
+      class="input font-lg bg-white full-width" [placeholder]="placeholder"></ion-input>
+  </ng-container>
+  <ng-template #isSelect>
+    <ion-select mode="md" [name]="controlName" [formControl]="control" fill="outline" class="custom-select"
+      interface="popover" toggleIcon="chevron-down" [placeholder]="placeholder">
+      <ng-container *ngIf="selectOpts.length > 0">
+        <ion-select-option [value]="opt" *ngFor="let opt of selectOpts">{{opt}}</ion-select-option>
+      </ng-container>
+    </ion-select>
+  </ng-template>
+</div>
