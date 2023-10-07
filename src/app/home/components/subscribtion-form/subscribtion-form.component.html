@@ -1,9 +1,10 @@
 <section class="d-flex flex-col">
   <h3 class="font-semi-bold font-lg ion-no-margin">Subscribe</h3>
-  <form (ngSubmit)="subscribe()" #form="ngForm">
-    <ion-input type="email" placeholder="Enter your email" mode="md" fill="outline"
-      class="font-lg email-input ion-margin-bottom"></ion-input>
-    <ion-button expand="block" fill="outline" class="submit-btn ion-no-margin font-lg" mode="ios">
+  <form (ngSubmit)="subscribe(form)" #form="ngForm">
+    <ion-input type="email" placeholder="Enter your email" mode="md" fill="outline" required="true" name="email" email
+      ngModel errorText="Invalid email" class="font-lg email-input ion-margin-bottom"></ion-input>
+    <ion-button expand="block" type="submit" fill="outline" class="submit-btn ion-no-margin font-lg" mode="ios"
+      [disabled]="form.invalid">
       Subscribe
     </ion-button>
   </form>

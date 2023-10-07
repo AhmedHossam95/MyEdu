@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-subscribtion-form',
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribtion-form.component.scss'],
 })
 export class SubscribtionFormComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() { }
 
-  subscribe(): void {
-
+  subscribe(form: NgForm): void {
+    if (form.invalid) return;
+    console.log(form.value);
   }
 }
