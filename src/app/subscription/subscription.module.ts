@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { SubscriptionPageRoutingModule } from './subscription-routing.module';
-
 import { SubscriptionPage } from './subscription.page';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SubscriptionPageRoutingModule
+    SubscriptionPageRoutingModule,
+    CoreModule
   ],
   declarations: [SubscriptionPage]
 })
-export class SubscriptionPageModule {}
+export class SubscriptionPageModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { MAIN_CONTENT_IMG_PATH } from 'src/app/core/constants/imgs-paths';
 
 @Component({
@@ -15,18 +15,17 @@ export class MainContentComponent implements OnInit {
   mobileBtnHeight = 48;
   desktopBtnHeight = 70.4;
   minDesktopWidth = 1200;
-  constructor(private readonly platform: Platform) { }
+  constructor(private readonly navCtrl: NavController) { }
 
   ngOnInit() {
     this.getPlaceholderImgPath();
-    this.getDeviceHeight();
   }
 
   getPlaceholderImgPath(): void {
     this.placeholderImgPath = MAIN_CONTENT_IMG_PATH;
   }
 
-  getDeviceHeight(): void {
-    this.deviceWidth = this.platform.width();
+  navToSubscription(): void {
+    this.navCtrl.navigateForward('subscription');
   }
 }
