@@ -8,10 +8,12 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class UserSubscriptionFormComponent implements OnInit {
   userInfoForm!: FormGroup<any>;
+  grades: string[] = [];
   constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit() {
     this.initUserInfoForm();
+    this.getGrades();
   }
 
   initUserInfoForm(): void {
@@ -78,6 +80,10 @@ export class UserSubscriptionFormComponent implements OnInit {
 
   get genderControl(): FormControl<string> {
     return this.userInfoForm.get('childInfo.gender') as FormControl<string>;
+  }
+
+  getGrades(): void {
+    this.grades = ['grade 1', 'grade 2', 'grade 3', 'grade 4', 'grade 5', 'grade 6', 'grade 7', 'grade 8'];
   }
 
   // get topicsControl(): FormArr<string[]> {

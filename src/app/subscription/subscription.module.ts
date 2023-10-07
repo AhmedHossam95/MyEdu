@@ -8,6 +8,7 @@ import { CoreModule } from '../core/core.module';
 import { UserSubscriptionFormComponent } from './components/user-subscription-form/user-subscription-form.component';
 import { SummmaryComponent } from './components/summmary/summmary.component';
 import { ChildDateControlComponent } from './components/child-date-control/child-date-control.component';
+import { GenderControlComponent } from './components/gender-control/gender-control.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { ChildDateControlComponent } from './components/child-date-control/child
     CoreModule,
     ReactiveFormsModule
   ],
-  declarations: [SubscriptionPage, UserSubscriptionFormComponent, SummmaryComponent, ChildDateControlComponent]
+  declarations: [SubscriptionPage, UserSubscriptionFormComponent, SummmaryComponent, ChildDateControlComponent, GenderControlComponent]
 })
 export class SubscriptionPageModule { }
