@@ -10,7 +10,7 @@
 
     <!--CONTACT INFO -->
     <section class="full-width">
-      <h2 class="font-xl ion-no-margin font-bold contact-info-title">Contact Information</h2>
+      <h2 class="font-xl ion-no-margin font-bold form-sub-title">Contact Information</h2>
       <div class="contact-info-wrapper d-flex flex-col">
         <app-form-control label="your name" [control]="nameControl" type="text" controlName="name"
           placeholder="e.g Osama Alshathri"></app-form-control>
@@ -22,7 +22,7 @@
 
     <!--CHILD INFO -->
     <section class="full-width">
-      <h2 class="font-xl ion-no-margin font-bold contact-info-title">Child's Information</h2>
+      <h2 class="font-xl ion-no-margin font-bold form-sub-title">Child's Information</h2>
       <div class="contact-info-wrapper d-flex flex-col">
         <app-form-control label="child’s full name" type="text" [control]="childNameControl" controlName="childName"
           placeholder="e.g Sarah Mohammad"></app-form-control>
@@ -31,6 +31,17 @@
         <app-form-control label="Grade" type="select" [control]="gradeControl" controlName="grade" [selectOpts]="grades"
           placeholder="e.g Grade 2"></app-form-control>
         <app-gender-control [control]="genderControl"></app-gender-control>
+      </div>
+    </section>
+
+    <!--TOPICS -->
+    <section class="full-width">
+      <h2 class="font-xl ion-no-margin font-bold form-sub-title">As a parent select any 3 topics</h2>
+      <div class="topics-wrapper d-flex" formArrayName="topics">
+        <ion-chip *ngFor="let topic of topics;let i = index" class="topic font-lg" (click)="selectTopic(i)"
+          [class.selected]="topicsControl.value[i]">
+          {{topic | titlecase}}
+        </ion-chip>
       </div>
     </section>
   </article>

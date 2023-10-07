@@ -6,7 +6,7 @@
     line-height: 150%;
 }
 
-.contact-info-title {
+.form-sub-title {
     line-height: 160%;
     margin-bottom: 8px;
 }
@@ -17,4 +17,26 @@
     .contact-info-wrapper {
         gap: 24px;
     }
+}
+
+.topics-wrapper {
+    gap: 8px;
+    flex-wrap: wrap;
+
+    .topic {
+        line-height: 150%;
+        --background: var(--ion-color-white);
+        --color: var(--ion-color-dark);
+        padding: 4px 20px;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        border-radius: 48px;
+        border: 1px solid #E1E3E6;
+
+        &.selected {
+            --background: #F4F1FE;
+            --color: var(--ion-color-primary);
+            border: 1px solid var(--ion-color-primary);
+        }
+    }
+
 }

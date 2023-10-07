@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-subscription-form',
@@ -9,11 +9,15 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class UserSubscriptionFormComponent implements OnInit {
   userInfoForm!: FormGroup<any>;
   grades: string[] = [];
+  topics: string[] = [];
+  MAX_TOPICS_COUNT = 3;
+
   constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit() {
     this.initUserInfoForm();
     this.getGrades();
+    this.getTopics();
   }
 
   initUserInfoForm(): void {
@@ -82,12 +86,34 @@ export class UserSubscriptionFormComponent implements OnInit {
     return this.userInfoForm.get('childInfo.gender') as FormControl<string>;
   }
 
+
   getGrades(): void {
     this.grades = ['grade 1', 'grade 2', 'grade 3', 'grade 4', 'grade 5', 'grade 6', 'grade 7', 'grade 8'];
   }
 
-  // get topicsControl(): FormArr<string[]> {
-  //   return this.userInfoForm.get('contactInfo.gender') as FormControl<string>;
-  // }
+  getTopics(): void {
+    this.topics = ['arabic', 'islamic', 'english', 'history', 'sports'];
+    this.topicsControl.controls = this.topics.map(topic => this.fb.control(false));
+  }
+
+  get topicsControl(): FormArray {
+    return this.userInfoForm.get('topics') as FormArray;
+  }
+
+
+
+  selectTopic(index: number): void {
+    const control = this.topicsControl.at(index) as FormControl<boolean>;
+    if (control.value || this.checkSelectedTopicsCount()) {
+      control.patchValue(!control.value);
+      this.topicsControl.updateValueAndValidity();
+    } else {
+      console.log('max topics count reached');
+    }
+  }
+
+  checkSelectedTopicsCount(): boolean {
+    return this.topicsControl.controls.filter(control => control.value).length < this.MAX_TOPICS_COUNT;
+  }
 
 }
