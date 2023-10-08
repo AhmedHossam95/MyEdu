@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { subscriptionFormComponent } from './subscription-form.component';
+import { EmailSubscriptionFormComponent } from './email-subscription-form.component';
 
 describe('subscriptionFormComponent', () => {
-  let component: subscriptionFormComponent;
-  let fixture: ComponentFixture<subscriptionFormComponent>;
+  let component: EmailSubscriptionFormComponent;
+  let fixture: ComponentFixture<EmailSubscriptionFormComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [subscriptionFormComponent],
+      declarations: [EmailSubscriptionFormComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(subscriptionFormComponent);
+    fixture = TestBed.createComponent(EmailSubscriptionFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

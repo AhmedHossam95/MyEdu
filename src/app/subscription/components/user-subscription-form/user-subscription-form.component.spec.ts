@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { UserInfoFormComponent } from './user-subscription-form.component';
+import { UserSubscriptionFormComponent } from './user-subscription-form.component';
 
-describe('UserInfoFormComponent', () => {
-  let component: UserInfoFormComponent;
-  let fixture: ComponentFixture<UserInfoFormComponent>;
+describe('UserSubscriptionFormComponent', () => {
+  let component: UserSubscriptionFormComponent;
+  let fixture: ComponentFixture<UserSubscriptionFormComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [UserInfoFormComponent],
+      declarations: [UserSubscriptionFormComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(UserInfoFormComponent);
+    fixture = TestBed.createComponent(UserSubscriptionFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
