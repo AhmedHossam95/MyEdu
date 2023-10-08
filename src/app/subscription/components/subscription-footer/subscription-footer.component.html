@@ -1,0 +1,7 @@
+<footer class="footer flex-space-between ion-align-items-center">
+  <ion-img [src]="logoPath" class="logo"></ion-img>
+  <nav class="nav-links d-flex">
+    <a *ngFor="let navLink of navLinks" class="nav-link font-lg font-semi-bold">{{navLink | titlecase}}</a>
+  </nav>
+  <p class="font-lg copy-rights">© 2077 MyEdu</p>
+</footer>

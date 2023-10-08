@@ -7,7 +7,6 @@
     <app-divider bgClassName="bg-light-purple"></app-divider>
   </div>
   <article class="form-controls-wrapper d-flex flex-col ">
-
     <!--CONTACT INFO -->
     <section class="full-width">
       <h2 class="font-xl ion-no-margin font-bold form-sub-title">Contact Information</h2>
@@ -16,10 +15,8 @@
           placeholder="e.g Osama Alshathri"></app-form-control>
         <app-form-control label="email" [control]="emailControl" type="email" controlName="email"
           placeholder="Osama@gmail.com"></app-form-control>
-
       </div>
     </section>
-
     <!--CHILD INFO -->
     <section class="full-width">
       <h2 class="font-xl ion-no-margin font-bold form-sub-title">Child's Information</h2>
@@ -33,7 +30,6 @@
         <app-gender-control [control]="genderControl"></app-gender-control>
       </div>
     </section>
-
     <!--TOPICS -->
     <section class="full-width">
       <h2 class="font-xl ion-no-margin font-bold form-sub-title">As a parent select any 3 topics</h2>
@@ -44,11 +40,7 @@
         </ion-chip>
       </div>
     </section>
-
-
-
   </article>
-
   <ion-button expand="block" class="custom-btn font-xl ion-no-margin font-extra-bold ion-hide-xl-down" type="submit"
     mode="ios">
     {{'continue to payment' | titlecase}}
