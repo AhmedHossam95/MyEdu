@@ -13,6 +13,5 @@ export class EmailSubscriptionFormComponent implements OnInit {
 
   subscribe(form: NgForm): void {
     if (form.invalid) return;
-    console.log(form.value);
   }
 }

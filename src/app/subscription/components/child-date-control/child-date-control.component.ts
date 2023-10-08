@@ -17,7 +17,6 @@ export class ChildDateControlComponent implements OnInit {
 
   ngOnInit() {
     this.getDateFormControls();
-    console.log('dateControls', this.dateControls);
   }
 
   getDateFormControls(): void {

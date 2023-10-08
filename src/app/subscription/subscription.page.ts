@@ -24,7 +24,6 @@ export class SubscriptionPage implements OnInit {
       childInfo: this.childInfoFormGroupFactory(),
       topics: this.fb.array([]),
     });
-    console.log(this.userInfoForm.controls);
   }
 
   userInfoFormGroupFactory(): FormGroup<any> {
@@ -60,7 +59,6 @@ export class SubscriptionPage implements OnInit {
   }
 
   submitForm(): void {
-    console.log('Form Submitted', this.userInfoForm.value);
   }
 
 
