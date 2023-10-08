@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { CoreModule } from '../core/core.module';
+import { CoreModule } from '../../core/core.module';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DiscoverComponent } from './components/discover/discover.component';
