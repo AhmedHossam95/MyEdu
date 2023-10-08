@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,52 +7,20 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
   styleUrls: ['./user-subscription-form.component.scss'],
 })
 export class UserSubscriptionFormComponent implements OnInit {
-  userInfoForm!: FormGroup<any>;
-  grades: string[] = [];
-  topics: string[] = [];
+  @Input() userInfoForm!: FormGroup<any>;
+  @Input() grades: string[] = [];
+  @Input() topics: string[] = [];
   MAX_TOPICS_COUNT = 3;
 
   constructor(private readonly fb: FormBuilder) { }
 
-  ngOnInit() {
-    this.initUserInfoForm();
-    this.getGrades();
-    this.getTopics();
+  ngOnInit(): void {
+    this.fillTopics();
   }
 
-  initUserInfoForm(): void {
-    this.userInfoForm = this.fb.group({
-      contactInfo: this.userInfoFormGroupFactory(),
-      childInfo: this.childInfoFormGroupFactory(),
-      topics: this.fb.array([]),
-    });
-    console.log(this.userInfoForm.controls);
+  fillTopics(): void {
+    this.topicsControl.controls = this.topics.map(topic => this.fb.control(false));
   }
-
-  userInfoFormGroupFactory(): FormGroup<any> {
-    return this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
-    });
-  }
-
-  childInfoFormGroupFactory(): FormGroup<any> {
-    return this.fb.group({
-      fullName: ['', Validators.required],
-      dateOfBirth: this.dateOfBirthFormGroupFactory(),
-      grade: ['', Validators.required],
-      gender: ['', Validators.required]
-    });
-  }
-
-  dateOfBirthFormGroupFactory(): FormGroup<any> {
-    return this.fb.group({
-      date: ['', Validators.required],
-      month: ['', Validators.required],
-      year: ['', Validators.required]
-    });
-  }
-
 
   get nameControl(): FormControl<string> {
     return this.userInfoForm.get('contactInfo.name') as FormControl<string>;
@@ -69,6 +37,7 @@ export class UserSubscriptionFormComponent implements OnInit {
   get dateControl(): FormControl<string> {
     return this.userInfoForm.get('childInfo.dateOfBirth.date') as FormControl<string>;
   }
+
   get monthControl(): FormControl<string> {
     return this.userInfoForm.get('childInfo.dateOfBirth.month') as FormControl<string>;
   }
@@ -76,7 +45,6 @@ export class UserSubscriptionFormComponent implements OnInit {
   get yearControl(): FormControl<string> {
     return this.userInfoForm.get('childInfo.dateOfBirth.year') as FormControl<string>;
   }
-
 
   get gradeControl(): FormControl<string> {
     return this.userInfoForm.get('childInfo.grade') as FormControl<string>;
@@ -86,21 +54,9 @@ export class UserSubscriptionFormComponent implements OnInit {
     return this.userInfoForm.get('childInfo.gender') as FormControl<string>;
   }
 
-
-  getGrades(): void {
-    this.grades = ['grade 1', 'grade 2', 'grade 3', 'grade 4', 'grade 5', 'grade 6', 'grade 7', 'grade 8'];
-  }
-
-  getTopics(): void {
-    this.topics = ['arabic', 'islamic', 'english', 'history', 'sports'];
-    this.topicsControl.controls = this.topics.map(topic => this.fb.control(false));
-  }
-
   get topicsControl(): FormArray {
     return this.userInfoForm.get('topics') as FormArray;
   }
-
-
 
   selectTopic(index: number): void {
     const control = this.topicsControl.at(index) as FormControl<boolean>;
@@ -116,7 +72,4 @@ export class UserSubscriptionFormComponent implements OnInit {
     return this.topicsControl.controls.filter(control => control.value).length < this.MAX_TOPICS_COUNT;
   }
 
-  submitForm(): void {
-    console.log('Form Submitted', this.userInfoForm.value);
-  }
 }

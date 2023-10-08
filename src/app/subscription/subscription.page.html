@@ -1,9 +1,10 @@
 <ion-content>
   <div class="d-flex flex-col ion-align-items-center full-height wrapper">
-    <article class="subscription-card d-flex flex-col">
-      <app-user-subscription-form> </app-user-subscription-form>
+    <form [formGroup]="userInfoForm" (ngSubmit)="submitForm()" class="subscription-card d-flex flex-col">
+      <app-user-subscription-form [userInfoForm]="userInfoForm" [grades]="grades" [topics]="topics">
+      </app-user-subscription-form>
       <app-summmary></app-summmary>
-    </article>
+    </form>
   </div>
 
 </ion-content>
