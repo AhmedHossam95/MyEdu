@@ -10,7 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "deploy-gh": "ionic build --prod -- --base-href https://github.com/AhmedHossam95/MyEdu/ && npx angular-cli-ghpages --dir=www"
+    "deploy-gh": "ionic build --prod -- --base-href https://ahmedhossam95.github.io/MyEdu/ && npx angular-cli-ghpages --dir=www"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, Platform } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { MAIN_CONTENT_IMG_PATH } from 'src/app/core/constants/imgs-paths';
 
 @Component({
