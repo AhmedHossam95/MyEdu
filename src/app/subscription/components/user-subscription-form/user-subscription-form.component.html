@@ -1,4 +1,4 @@
-<form [formGroup]="userInfoForm" class="subscription-form">
+<form [formGroup]="userInfoForm" class="subscription-form bg-white">
   <section>
     <h1 class="form-title font-xxl font-bold ion-no-margin">Subscribe</h1>
     <p class="form-title-desc font-lg  ion-no-margin">to our Monthly Surprise Box</p>
@@ -38,12 +38,17 @@
     <section class="full-width">
       <h2 class="font-xl ion-no-margin font-bold form-sub-title">As a parent select any 3 topics</h2>
       <div class="topics-wrapper d-flex" formArrayName="topics">
-        <ion-chip *ngFor="let topic of topics;let i = index" class="topic font-lg" (click)="selectTopic(i)"
-          [class.selected]="topicsControl.value[i]">
+        <ion-chip *ngFor="let topic of topics;let i = index" class="topic font-lg ion-no-margin"
+          (click)="selectTopic(i)" [class.selected]="topicsControl.value[i]">
           {{topic | titlecase}}
         </ion-chip>
       </div>
     </section>
+
+    <ion-button expand="block" class="custom-btn font-xl ion-no-margin font-extra-bold ion-hide-xl-down" mode="ios">
+      {{'continue to payment' | titlecase}}
+    </ion-button>
+
   </article>
 
 </form>

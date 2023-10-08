@@ -1,5 +1,5 @@
 article {
-    padding-block: 32px 56px;
+    padding: 104px 16px 56px 16px;
 
     .content-wrapper {
         margin-bottom: 80px;
@@ -26,7 +26,7 @@ article {
 
 @media screen and (min-width: 1200px) {
     article {
-        padding: 112px 64px;
+        padding: 208px 64px 112px 64px;
 
         .content-wrapper {
             width: 804px;

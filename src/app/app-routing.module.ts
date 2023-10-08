@@ -11,9 +11,8 @@ const routes: Routes = [
     loadChildren: () => import('./subscription/subscription.module').then(m => m.SubscriptionPageModule)
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: '**',
+    redirectTo: 'home'
   },
 
 ];

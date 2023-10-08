@@ -116,4 +116,7 @@ export class UserSubscriptionFormComponent implements OnInit {
     return this.topicsControl.controls.filter(control => control.value).length < this.MAX_TOPICS_COUNT;
   }
 
+  submitForm(): void {
+    console.log('Form Submitted', this.userInfoForm.value);
+  }
 }

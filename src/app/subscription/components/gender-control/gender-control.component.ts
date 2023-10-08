@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./gender-control.component.scss'],
 })
 export class GenderControlComponent implements OnInit {
-  genders = ['male', 'female'];
+  genders = ['boy', 'girl'];
   @Input() control!: FormControl<string>;
   constructor() { }
 

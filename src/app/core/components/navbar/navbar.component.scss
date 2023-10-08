@@ -1,7 +1,9 @@
 .header {
     height: 72px;
     width: 100%;
-    margin-bottom: -1px;
+    z-index: 9999999;
+    position: absolute;
+    top: 0px;
 
     ion-img {
         width: 63px;
